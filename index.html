@@ -1,13 +1,44 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My app</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <h1>My app</h1>
-  <script src="app.js"></script>
-</body>
-</html>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>Recipe Box</title> 
+<link rel="stylesheet" href="styles.css"> 
+</head> 
+<body> 
+<header> 
+<h1>Recipe Box</h1> 
+</header> 
+<main>
+<section>
+<h2>Add a recipe</h2>
+<form id="recipe-form">
+<label>Name
+<input type="text" id="name-input" required>
+</label>
+<label>Ingredients (one per line)
+<textarea id="ingredients-input" rows="5" required></textarea>
+</label>
+<label>Steps (one per line)
+<textarea id="steps-input" rows="5"></textarea>
+</label>
+<div class="button-row">
+<button type="submit" id="save-button">Save recipe</button>
+<button type="button" id="cancel-button">Cancel</button>
+</div>
+</form>
+</section>
+<section>
+<h2>Find by ingredient</h2>
+<input type="text" id="search-input" placeholder="e.g. eggs">
+</section>
+<section>
+<h2>My recipes</h2>
+<p id="empty-message" class="empty"></p>
+<div id="recipe-list" class="recipe-list"></div>
+</section>
+</main>
+<script src="app.js"></script> 
+</body> 
+</html> 
